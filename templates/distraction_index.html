@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Distraction Detector</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+    .container {
+      text-align: center;
+      max-width: 600px;
+      margin-top: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      cursor: pointer;
+      margin: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Distraction Detector</h2>
+    <p>Distraction Status: <span id="distractionStatus">Loading...</span></p>
+    <button onclick="startCamera()">Start Camera</button>
+    <button onclick="stopCamera()">Stop Camera</button>
+    <img id="videoFeed" src="" alt="Camera Stream" style="display:none;">
+  </div>
+
+  <script src="static/js/distraction_script.js"></script>
+</body>
+</html>
