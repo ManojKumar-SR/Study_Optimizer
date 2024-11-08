@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Optimizer</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-blue-100 flex flex-col items-center min-h-screen p-4">
+    <div class="text-center bg-white p-6 rounded-lg shadow-lg w-full max-w-6xl mb-6">
+        <h1 class="text-4xl font-bold text-gray-700 mb-4">Study Optimizer</h1>
+        <p class="text-lg text-gray-600 mb-6">Real-time engagement, emotion, distraction, and posture detection</p>
+        
+        <div class="flex justify-center gap-4 mb-6">
+            <button onclick="startCamera()" class="bg-green-500 text-white font-semibold py-2 px-4 rounded hover:bg-green-600">
+                Start Camera
+            </button>
+            <button onclick="stopCamera()" class="bg-red-500 text-white font-semibold py-2 px-4 rounded hover:bg-red-600">
+                Stop Camera
+            </button>
+        </div>
+
+        <!-- Video Feed and Alert Box Container -->
+        <div class="flex justify-center gap-6">
+            <!-- Video Feed -->
+            <div class="relative">
+                <img id="videoFeed" src="" alt="Camera Feed" class="rounded-lg w-full max-w-3xl object-contain hidden">
+            </div>
+
+            <!-- Alert Box (hidden initially) -->
+            <div id="alertBox" class="bg-red-50 text-red-900 p-4 w-80 h-96 rounded-lg shadow-lg overflow-y-auto hidden">
+                <h2 class="text-xl font-bold mb-2">Alert Box</h2>
+                <div id="alertBoxContent" class="text-sm">
+                    <p>No alerts at this time.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Status Columns -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
+            <div class="bg-blue-200 p-4 rounded-lg text-center">
+                <p class="font-semibold text-gray-800">Engagement Status</p>
+                <p id="engagementStatus" class="text-lg text-blue-800 mt-2">Not Engaged</p>
+            </div>
+            <div class="bg-green-200 p-4 rounded-lg text-center">
+                <p class="font-semibold text-gray-800">Emotion</p>
+                <p id="emotionStatus" class="text-lg text-green-800 mt-2">None</p>
+            </div>
+            <div class="bg-red-200 p-4 rounded-lg text-center">
+                <p class="font-semibold text-gray-800">Distraction Status</p>
+                <p id="distractionStatus" class="text-lg text-red-800 mt-2">Not Distracted</p>
+            </div>
+            <div class="bg-yellow-200 p-4 rounded-lg text-center">
+                <p class="font-semibold text-gray-800">Posture Status</p>
+                <p id="postureStatus" class="text-lg text-yellow-800 mt-2">Unknown</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/appscript.js"></script>
+</body>
+</html>

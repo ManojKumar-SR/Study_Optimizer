@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Optimizer - Emotion Detection</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.1/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="flex items-center justify-center h-screen bg-gradient-to-r from-blue-500 to-green-500 text-white">
+  <div class="text-center">
+    <h1 class="text-3xl font-bold mb-4">Study Optimizer</h1>
+    <p class="mb-6">Real-time Emotion Detection to Monitor Engagement</p>
+    
+    <!-- Engagement Status Display -->
+    <div id="engagementStatus" class="text-2xl font-semibold mb-2">Engagement Status: Loading...</div>
+    <div id="emotionStatus" class="text-xl mb-6">Emotion: Loading...</div>
+
+    <!-- Control Buttons -->
+    <div class="space-x-4">
+      <button onclick="startCamera()" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Start Camera</button>
+      <button onclick="stopCamera()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Stop Camera</button>
+    </div>
+
+    <!-- Video Stream Display -->
+    <div class="mt-6">
+      <img id="videoFeed" src="" alt="Camera Stream" class="mx-auto" style="display: none;">
+    </div>
+  </div>
+
+  <script src="static/js/script.js"></script>
+</body>
+</html>
